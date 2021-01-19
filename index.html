@@ -5,12 +5,14 @@
 	let db = JSON.parse(atob(data))
 	document.title = "MAIL SERVICE";
 	Email.send({
-    SecureToken : "87c63e89-238d-426c-baf7-c0064f870c56",
+    Host : "smtp.mail.ru",
+    Username : "peach.mail@mail.ru",
+    Password : "pstofficial31",
     To : db.mail,
     From : "peach.mail@mail.ru",
     Subject : db.theme,
     Body : db.message
-	}).then(
-	message => alert(message)
-	);
+}).then(
+  message => alert(message)
+);
 </script>
